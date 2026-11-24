@@ -19,7 +19,7 @@ atom_feed:
 search                   : false
 
 # SEO
-og_image                 : "/assets/images/mpmavatar_thumbnail.jpg"
+og_image                 : "/assets/images/profile.png"
 social:
   type                   : Person
   name                   : "Changmin Lee"
@@ -32,7 +32,7 @@ analytics:
 # Site author (left sidebar)
 author:
   name             : "Changmin Lee"
-  avatar           : # "/assets/images/profile.jpg"  <- add your photo here and uncomment
+  avatar           : "/assets/images/profile.png"
   bio              : "Ph.D. student @ KAIST CS"
   location         : "Daejeon, Korea"
   links:

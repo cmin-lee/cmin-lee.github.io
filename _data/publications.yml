@@ -14,7 +14,7 @@
     - name: Tae-Kyun Kim
   venue: ICML 2026
   arXiv: https://arxiv.org/abs/2605.09538
-  # thumbnail: assets/images/physhandi_thumbnail.jpg
+  thumbnail: assets/images/physhandi.png
 
 - key: mpmavatar
   selected: true
@@ -28,4 +28,4 @@
   project: /MPMAvatar/
   arXiv: https://arxiv.org/abs/2510.01619
   code: https://github.com/KAISTChangmin/MPMAvatar
-  thumbnail: assets/images/mpmavatar_thumbnail.jpg
+  thumbnail: assets/images/mpmavatar.png
