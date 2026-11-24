@@ -9,9 +9,12 @@
   title: "PhysHanDI: Physics-Based Reconstruction of Hand-Deformable Object Interactions"
   authors:
     - name: Jihyun Lee*
+      link: https://jyunlee.github.io/
     - name: Changmin Lee*
     - name: Donghwan Kim
+      link: https://donghwankim0101.github.io/
     - name: Tae-Kyun Kim
+      link: https://sites.google.com/view/tkkim/
   venue: ICML 2026
   project: https://jyunlee.github.io/projects/physhandi/
   arXiv: https://arxiv.org/abs/2605.09538
@@ -24,7 +27,9 @@
   authors:
     - name: Changmin Lee
     - name: Jihyun Lee
+      link: https://jyunlee.github.io/
     - name: Tae-Kyun Kim
+      link: https://sites.google.com/view/tkkim/
   venue: NeurIPS 2025
   project: /MPMAvatar/
   arXiv: https://arxiv.org/abs/2510.01619
