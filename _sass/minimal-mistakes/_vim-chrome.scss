@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Page chrome - headings/bio: $chrome-heading-color; accents: $highlight-color
+   ========================================================================== */
+
+/* Section titles (Bio, 3D Gallery, ...) + page title */
+.archive h3.archive__subtitle,
+.page__content h3.archive__subtitle {
+  border-bottom: none;
+  border-left: none;
+  padding-left: 0;
+  padding-bottom: 0.35em;
+  margin-bottom: 0.65em;
+  color: $chrome-heading-color;
+  font-weight: 600;
+}
+
+.page__title {
+  color: $chrome-heading-color;
+}
+
+.page__content {
+  h1,
+  h2,
+  h3:not(.archive__subtitle),
+  h4,
+  h5,
+  h6 {
+    color: $chrome-heading-color;
+  }
+
+  h2 {
+    border-bottom-color: mix($highlight-color, $border-color, 55%);
+  }
+
+  blockquote {
+    border-left-color: $highlight-color;
+    background: mix($highlight-color, $background-color, 12%);
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      $border-color 15%,
+      $highlight-color 50%,
+      $border-color 85%,
+      transparent
+    );
+    margin: 2em 0;
+  }
+}
+
+.bio b,
+.bio strong {
+  color: $chrome-heading-color;
+}
+
+/* Highlights - bright KAIST blue (readable on dark background) */
+article.news ul li::marker {
+  color: $highlight-color;
+}
+
+article.publication desc-cell header {
+  color: $chrome-heading-color;
+}
+
+article.publication conference {
+  color: $text-color;
+}
+
+article.publication authors {
+  color: $text-color;
+}
+
+article.publication authors u {
+  color: $text-color;
+  border-bottom-color: mix(#000, $text-color, 35%);
+}
+
+.sidebar .author__name {
+  color: $text-color;
+}
+
+article.publication thumbnail {
+  border-color: mix($highlight-color, #9aa4b2, 45%);
+}

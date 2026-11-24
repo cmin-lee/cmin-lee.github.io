@@ -1,0 +1,124 @@
+# Site settings — based on Minimal Mistakes (https://github.com/mmistakes/minimal-mistakes),
+# styled after https://63days.github.io/. The theme files are vendored into this repo.
+
+minimal_mistakes_skin    : "kaist" # _sass/minimal-mistakes/skins/_kaist.scss — white bg, black text, KAIST-blue links
+locale                   : "en-US"
+title                    : "Changmin Lee"
+title_separator          : "-"
+name                     : "Changmin Lee"
+description              : "Ph.D. student @ KAIST CS"
+url                      : "https://kaistchangmin.github.io"
+baseurl                  : ""
+repository               : "KAISTChangmin/KAISTChangmin.github.io"
+masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+words_per_minute         : 200
+
+atom_feed:
+  hide                   : true
+
+search                   : false
+
+# SEO
+og_image                 : "/assets/images/mpmavatar_thumbnail.jpg"
+social:
+  type                   : Person
+  name                   : "Changmin Lee"
+  links:
+    - "https://github.com/KAISTChangmin"
+
+analytics:
+  provider               : false
+
+# Site author (left sidebar)
+author:
+  name             : "Changmin Lee"
+  avatar           : # "/assets/images/profile.jpg"  <- add your photo here and uncomment
+  bio              : "Ph.D. student @ KAIST CS"
+  location         : "Daejeon, Korea"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:lcm914@kaist.ac.kr"
+    # - label: "Google Scholar"
+    #   icon: "fas fa-fw fa-graduation-cap"
+    #   url: "https://scholar.google.com/citations?user=XXXX"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/KAISTChangmin"
+    - label: "Curriculum Vitae"
+      icon: "fas fa-fw fa-file-pdf"
+      url: "/assets/CV.pdf"
+
+# Site footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/KAISTChangmin"
+
+# Reading files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CV/cv.tex
+  - node_modules
+  - tmp
+keep_files:
+  - .git
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-include-cache
+
+whitelist:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-include-cache
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true

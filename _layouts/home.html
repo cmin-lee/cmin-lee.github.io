@@ -1,0 +1,168 @@
+---
+layout: archive
+---
+{%- comment -%}
+  Personal home page, modeled after https://63days.github.io/.
+  Edit content in: index.html (Bio), _data/news.yml, _data/publications.yml, and the sections below.
+{%- endcomment -%}
+
+<style>
+	.toggle-container {
+		display: flex;
+		gap: 10px;
+		margin-bottom: 10px;
+	}
+
+	.toggle-btn {
+		background: #ffffff;
+		border: 1px solid rgba(0, 0, 0, 0.12);
+		border-radius: 4px;
+		padding: 5px 15px;
+		cursor: pointer;
+		font-size: 14px;
+		color: #1f2937;
+		transition: all 0.2s ease-in-out;
+	}
+
+	.toggle-btn:hover {
+		border-color: rgba(0, 0, 0, 0.25);
+	}
+
+	.toggle-btn.active {
+		border-color: rgb(0, 65, 135);
+		color: rgb(0, 65, 135);
+	}
+
+	.global-note {
+		font-size: 16px;
+		color: #000000;
+		margin-bottom: 20px;
+		margin-top: 5px;
+	}
+</style>
+
+<h3 class="archive__subtitle">Bio</h3>
+{{ content }}
+
+<h3 class="archive__subtitle" id="news">News</h3>
+<article class="news">
+	<ul id="newsList">
+		{% for item in site.data.news %}
+		<li> ({{ item.date }}) {{ item.text }}</li>
+		{% endfor %}
+	</ul>
+	{% if site.data.news.size > 10 %}<button class="listBtn" id="newsBtn">Show All</button>{% endif %}
+</article>
+
+<h3 class="archive__subtitle" id="publications">Publications</h3>
+{% assign unselected = site.data.publications | where: "selected", false %}
+{% if unselected.size > 0 %}
+<div class="toggle-container">
+	<button class="toggle-btn active" id="btnSelected">Selected</button>
+	<button class="toggle-btn" id="btnAll">All</button>
+</div>
+{% endif %}
+<p class="global-note">* denotes equal contribution.</p>
+
+<article class="publication">
+	{% for pub in site.data.publications %}
+	<publication-cell class="pub-item {% if pub.selected == false %}publication-hidden{% endif %}"
+		data-selected="{{ pub.selected }}">
+		<thumbnail style="align-items: center; display: flex;">
+			{% if pub.thumbnail %}
+			<img style="max-width:100%; max-height: 100%; object-fit: contain;" src="{{ pub.thumbnail | relative_url }}" alt="{{ pub.short | default: pub.title }}">
+			{% else %}
+			<div class="thumb-placeholder">{{ pub.short | default: pub.venue }}</div>
+			{% endif %}
+		</thumbnail>
+		<desc-cell>
+			<header><b>{{ pub.title }}</b></header>
+			<authors>
+				{% for author in pub.authors %}{% if author.name contains "Changmin Lee" %}<u>{{ author.name }}</u>{% elsif author.link %}<a href="{{ author.link }}" target="_blank">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
+			</authors>
+			<conference><i>{{ pub.venue }}</i>{% if pub.publication_note %} (<b>{{ pub.publication_note }}</b>){% endif %}</conference>
+			<links>
+				{% if pub.project %}<a href="{{ pub.project | relative_url }}" target="_blank">[Project]</a> {% endif %}
+				{% if pub.arXiv %}<a href="{{ pub.arXiv }}" target="_blank">[Paper]</a> {% endif %}
+				{% if pub.code %}<a href="{{ pub.code }}" target="_blank">[Code]</a> {% endif %}
+				{% if pub.video %}<a href="{{ pub.video }}" target="_blank">[Video]</a> {% endif %}
+				{% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank">[PDF]</a> {% endif %}
+				{% if pub.slides %}<a href="{{ pub.slides }}" target="_blank">[Slides]</a> {% endif %}
+			</links>
+		</desc-cell>
+	</publication-cell>
+	{% endfor %}
+</article>
+
+<h3 class="archive__subtitle" id="education">Education</h3>
+<ul class="cv-list">
+	<li><span><b>Ph.D. in Computer Science</b>, KAIST</span><span class="cv-date">Feb. 2026 – present</span></li>
+	<li><span><b>M.S. in Artificial Intelligence</b>, Kim Jaechul Graduate School of AI, KAIST</span><span class="cv-date">Feb. 2024 – Feb. 2026</span></li>
+	<li><span><b>B.S. in Computer Science and Mathematical Sciences</b> (double major), KAIST</span><span class="cv-date">Feb. 2019 – Feb. 2024</span></li>
+	<li><span><b>Korea Science Academy</b></span><span class="cv-date">Feb. 2016 – Feb. 2019</span></li>
+</ul>
+
+<h3 class="archive__subtitle" id="experience">Experience</h3>
+<ul class="cv-list">
+	<li><span><b>Research Intern</b>, Neural Rendering Team, Vision AI Research, NCSOFT
+		<span class="cv-sub">Accelerated human avatar reconstruction; text-driven human avatar stylization</span></span>
+		<span class="cv-date">Mar. 2023 – Aug. 2023</span></li>
+</ul>
+
+<h3 class="archive__subtitle" id="honors">Honors</h3>
+<ul class="cv-list">
+	<li><span><b>KAIST Presidential Fellowship</b></span><span class="cv-date">2019 – 2023</span></li>
+	<li><span><b>Samsung Dream Scholarship Foundation</b> College Hope Scholarship</span><span class="cv-date">2019 – 2023</span></li>
+	<li><span><b>Samsung Dream Scholarship Foundation</b> Science Excellence Scholarship</span><span class="cv-date">2018</span></li>
+	<li><span><b>Hansung Scholarship for Gifted Students</b></span><span class="cv-date">2017 – 2018</span></li>
+	<li><span><b>Highest Honors in Mathematics</b> (top graduate in mathematics), Korea Science Academy</span><span class="cv-date">2019</span></li>
+	<li><span><b>BNK Busan Bank President's Award</b>, Korea Science Academy Commencement</span><span class="cv-date">2019</span></li>
+</ul>
+
+<h3 class="archive__subtitle" id="service">Academic Service</h3>
+<article class="publication">
+	<p><b>Reviewer</b>: NeurIPS 2026, ICLR 2026, ACCV 2024</p>
+</article>
+
+<h3 class="archive__subtitle" id="teaching">Teaching</h3>
+<ul class="cv-list">
+	<li><span><b>Teaching Assistant</b>, Artificial Intelligence and Machine Learning (CS570), KAIST</span><span class="cv-date">Spring 2026</span></li>
+	<li><span><b>Peer Tutor</b>, Calculus I (MAS101), KAIST</span><span class="cv-date">Spring 2019, Spring 2020</span></li>
+</ul>
+
+<script>
+	(function () {
+		const maxVisibleItems = 10;
+		const newsButton = document.getElementById("newsBtn");
+		const newsList = document.querySelectorAll("#newsList li");
+		const collapse = () => newsList.forEach((item, i) => item.classList.toggle("hidden", i >= maxVisibleItems));
+		collapse();
+		if (newsButton) {
+			newsButton.addEventListener("click", () => {
+				if (newsButton.textContent === "Show All") {
+					newsList.forEach(item => item.classList.remove("hidden"));
+					newsButton.textContent = "Show Less";
+				} else {
+					collapse();
+					newsButton.textContent = "Show All";
+				}
+			});
+		}
+
+		const btnSelected = document.getElementById("btnSelected");
+		const btnAll = document.getElementById("btnAll");
+		const pubItems = document.querySelectorAll(".pub-item");
+		if (btnSelected && btnAll) {
+			btnSelected.addEventListener("click", () => {
+				btnSelected.classList.add("active");
+				btnAll.classList.remove("active");
+				pubItems.forEach(item => item.classList.toggle("publication-hidden", item.dataset.selected !== "true"));
+			});
+			btnAll.addEventListener("click", () => {
+				btnAll.classList.add("active");
+				btnSelected.classList.remove("active");
+				pubItems.forEach(item => item.classList.remove("publication-hidden"));
+			});
+		}
+	})();
+</script>

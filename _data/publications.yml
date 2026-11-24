@@ -1,0 +1,31 @@
+# Publications shown on the home page (newest first).
+# selected: false hides the paper under the "Selected" tab (the tab buttons appear only if some paper is unselected).
+# thumbnail: path to a teaser image; if omitted, a text placeholder with `short` is shown.
+# Own name ("Changmin Lee") is underlined automatically. Add "*" after a name for equal contribution.
+
+- key: physhandi
+  selected: true
+  short: "PhysHanDI"
+  title: "PhysHanDI: Physics-Based Reconstruction of Hand-Deformable Object Interactions"
+  authors:
+    - name: Jihyun Lee*
+    - name: Changmin Lee*
+    - name: Donghwan Kim
+    - name: Tae-Kyun Kim
+  venue: ICML 2026
+  arXiv: https://arxiv.org/abs/2605.09538
+  # thumbnail: assets/images/physhandi_thumbnail.jpg
+
+- key: mpmavatar
+  selected: true
+  short: "MPMAvatar"
+  title: "MPMAvatar: Learning 3D Gaussian Avatars with Accurate and Robust Physics-Based Dynamics"
+  authors:
+    - name: Changmin Lee
+    - name: Jihyun Lee
+    - name: Tae-Kyun Kim
+  venue: NeurIPS 2025
+  project: /MPMAvatar/
+  arXiv: https://arxiv.org/abs/2510.01619
+  code: https://github.com/KAISTChangmin/MPMAvatar
+  thumbnail: assets/images/mpmavatar_thumbnail.jpg

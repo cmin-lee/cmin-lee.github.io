@@ -1,0 +1,5 @@
+# Masthead links (empty, like 63days.github.io). Example:
+# main:
+#   - title: "Publications"
+#     url: /#publications
+main: []
