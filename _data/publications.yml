@@ -3,6 +3,19 @@
 # thumbnail: path to a teaser image; if omitted, a text placeholder with `short` is shown.
 # Own name ("Changmin Lee") is underlined automatically. Add "*" after a name for equal contribution.
 
+- key: efm
+  selected: true
+  short: "EfM"
+  title: "EfM: Simulation-Free Elastic Parameter Estimation from Observed Motion"
+  authors:
+    - name: Changmin Lee
+    - name: Taein Kwon
+      link: https://taeinkwon.com/
+    - name: Tae-Kyun Kim
+      link: https://sites.google.com/view/tkkim/
+  venue: Under Review
+  thumbnail: assets/images/efm.gif
+
 - key: physhandi
   selected: true
   short: "PhysHanDI"
