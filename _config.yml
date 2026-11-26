@@ -7,9 +7,9 @@ title                    : "Changmin Lee"
 title_separator          : "-"
 name                     : "Changmin Lee"
 description              : "Ph.D. student @ KAIST CS"
-url                      : "https://kaistchangmin.github.io"
+url                      : "https://cmin-lee.github.io"
 baseurl                  : ""
-repository               : "KAISTChangmin/KAISTChangmin.github.io"
+repository               : "cmin-lee/cmin-lee.github.io"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 words_per_minute         : 200
 
@@ -24,7 +24,7 @@ social:
   type                   : Person
   name                   : "Changmin Lee"
   links:
-    - "https://github.com/KAISTChangmin"
+    - "https://github.com/cmin-lee"
 
 analytics:
   provider               : false
@@ -47,7 +47,7 @@ author:
       url: "https://www.linkedin.com/in/kaistchangmin/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/KAISTChangmin"
+      url: "https://github.com/cmin-lee"
     - label: "Curriculum Vitae"
       icon: "fas fa-fw fa-file-pdf"
       url: "/assets/CV.pdf"
@@ -57,7 +57,7 @@ footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/KAISTChangmin"
+      url: "https://github.com/cmin-lee"
 
 # Reading files
 include:
